@@ -6,17 +6,15 @@ services:
     environment:
       - MONGODB_URI=mongodb://admin:${MONGODB_PASSWORD:-changeme}@mongodb:27017/
       - WEAVIATE_URL=http://weaviate:8080
-      # Observability (Opik) - Set OPIK_URL_OVERRIDE to your Opik instance
-      # Run Opik separately: git clone https://github.com/comet-ml/opik.git && cd opik && ./opik.sh
-      - OPIK_ENABLED=${OPIK_ENABLED:-false}
-      - OPIK_URL_OVERRIDE=${OPIK_URL_OVERRIDE:-http://host.docker.internal:5173/api}
+      # Observability (Opik)
+      - OPIK_ENABLED=${OPIK_ENABLED:-true}
+      - OPIK_URL_OVERRIDE=http://opik:5173/api
       - OPIK_WORKSPACE=default
       - OPIK_PROJECT_NAME=chartseek
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     depends_on:
       - mongodb
       - weaviate
+      - opik
     volumes:
       - ./cortex_on:/app
     env_file:
@@ -27,12 +25,19 @@ services:
     ports:
       - "8093:8081"           # CortexON API
 
-  # NOTE: Opik must be run separately (it has its own docker-compose with multiple services)
-  # To start Opik:
-  #   git clone https://github.com/comet-ml/opik.git
-  #   cd opik
-  #   ./opik.sh   (Linux/Mac) or powershell -ExecutionPolicy ByPass -c ".\opik.ps1" (Windows)
-  # Then set OPIK_ENABLED=true and restart cortex_on
+  opik:
+    image: ghcr.io/comet-ml/opik:latest
+    container_name: chartseek-opik
+    restart: unless-stopped
+    ports:
+      - "5173:5173"           # Opik Dashboard
+      - "8000:8000"           # Opik API
+    volumes:
+      - opik_data:/data
+    environment:
+      - OPIK_BACKEND_URL=http://localhost:8000
+    networks:
+      - cortex_network
 
   agentic_browser:
     build:
@@ -121,4 +126,5 @@ networks:
 volumes:
   mongodb_data:
   weaviate_data:
+  opik_data:
 

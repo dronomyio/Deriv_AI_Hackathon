@@ -1,0 +1,257 @@
+# ============================================
+# CortexON Video Understanding .gitignore
+# ============================================
+
+# ============================================
+# Environment & Secrets
+# ============================================
+.env
+.env.local
+.env.*.local
+*.env
+**/.env
+
+# API Keys and Tokens
+*_API_KEY*
+*_TOKEN*
+*.pem
+*.key
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.cover
+*.log
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# ============================================
+# Docker
+# ============================================
+# Don't ignore docker-compose.yaml (keep it)
+# But ignore local overrides
+docker-compose.override.yml
+docker-compose.*.yml
+!docker-compose.yaml
+
+# ============================================
+# Video Processing Data
+# ============================================
+# Downloaded videos
+/data/
+/data/downloads/
+/data/out/
+/data/cache/
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.flv
+
+# Video segments
+/segments/
+**/segments/
+
+# Transcripts (keep in git if small, exclude if large)
+# Uncomment if you want to exclude:
+# *.json
+# snippets_with_transcripts.json
+
+# ============================================
+# Machine Learning Models
+# ============================================
+# Downloaded embedding models
+.cache/
+**/.cache/
+sentence-transformers/
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.joblib
+
+# HuggingFace cache
+~/.cache/huggingface/
+
+# ============================================
+# Database & Vector Store
+# ============================================
+# Weaviate data
+weaviate_data/
+**/weaviate_data/
+
+# MongoDB data
+mongo_data/
+**/mongo_data/
+
+# Logfire spans
+.logfire/
+**/.logfire/
+logfire_spans.bin
+
+# ============================================
+# Backup & Temporary Files
+# ============================================
+*.backup
+*.bak
+*_backup
+*_back
+*.old
+*.orig
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Specific backup files in your project
+orchestrator_agent.py.backup*
+orchestrator_agent.py_backup
+main.py_backup
+docker-compose.yaml_ori
+Dockerfile.cortexon_video_back
+orchestrator_video_tools_mongodb.py_back
+
+# ============================================
+# Scripts & Tools (Temporary/Development)
+# ============================================
+# Keep scripts that are part of the project
+# Exclude temporary fix/test scripts
+fix_*.py
+fix_*.sh
+test_*.py
+rebuild_*.sh
+complete_fix.sh
+add_video_tools.py
+remove_duplicate_ingest_video.py
+
+# ============================================
+# IDE & Editor
+# ============================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# ============================================
+# OS Generated
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# Node.js (for frontend if applicable)
+# ============================================
+node_modules/
+**/node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# ============================================
+# Frontend Build (if applicable)
+# ============================================
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+
+# ============================================
+# Documentation Build
+# ============================================
+docs/_build/
+site/
+
+# ============================================
+# Testing
+# ============================================
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================
+# Misc
+# ============================================
+*.pid
+*.seed
+*.pid.lock
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# ============================================
+# Keep These Files (Explicitly)
+# ============================================
+# Uncomment to force-include specific files:
+# !important_file.txt
+!docker-compose.yaml
+!requirements.txt
+!README.md
+!LICENSE
