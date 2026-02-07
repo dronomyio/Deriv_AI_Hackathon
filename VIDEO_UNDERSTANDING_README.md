@@ -459,17 +459,10 @@ Contributions are welcome! Please follow these guidelines:
 3. Implement your changes with tests
 4. Submit a pull request
 
-## License
 
-This integration is licensed under the CortexON Open Source License Agreement.
+## Docs
 
-## Support
-
-For issues and questions:
-
-- GitHub Issues: https://github.com/TheAgenticAI/CortexON/issues
 - Documentation: https://cortexon.ai/docs
-- Community: https://github.com/TheAgenticAI/CortexON/discussions
 
 ## Acknowledgments
 
