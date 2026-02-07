@@ -1,0 +1,78 @@
+CortexON Open Source License Agreement
+
+Version 1.0
+Effective Date: March 13, 2025
+
+This Open Source License Agreement (the "Agreement") governs the use, modification, 
+and distribution of CortexON (the "AI Agent").
+
+1. Grant of License
+
+    Subject to the terms of this Agreement, the Licensor grants to you ("Licensee") 
+    a worldwide, royalty-free, non-exclusive, irrevocable (except as stated herein) 
+    license to use, modify, distribute, and reproduce CortexON, subject to the 
+    restrictions set forth below.
+
+2. Permitted Uses
+
+    Licensee may:
+    
+        (a) Use CortexON for research, commercial, and non-commercial applications.
+
+        (b) Modify, adapt, and improve CortexON, provided that any modifications are 
+        documented and attributed to the modifying party.
+
+        (c) Distribute CortexON and derivative works under the terms of this Agreement.
+
+        (d) Commercially use or resell CortexON, provided it is branded as CortexON 
+        and includes a mention of any modifications made by the Licensee.
+
+3. Prohibited Uses
+
+    No Rebranding or Competing Branded Projects 
+
+        Licensee may not:
+
+            (a) Rebrand CortexON under a different name.
+
+            (b) Create or promote a similar open-source or commercial product using 
+            CortexON under a different brand name.
+
+4. Compliance with Third-Party Licenses
+
+    CortexON may incorporate open-source components subject to separate licensing 
+    terms. Licensee must comply with the terms of any third-party licenses when 
+    using such components.
+
+5. Attribution
+
+    If Licensee distributes or publicly uses CortexON or derivative works, they must 
+    include appropriate attribution to CortexON and a copy of this Agreement. Any 
+    modifications must be clearly documented and attributed to the modifying party.
+
+6. Enforcement & Termination
+
+    6.1 Violation of Terms
+        If Licensee breaches this Agreement, their rights under this license are 
+        automatically terminated.
+
+    6.2 Reinstatement
+        Licensor may, at its discretion, reinstate Licensee’s rights if the violation 
+        is remedied.
+
+7. Disclaimer of Warranties
+
+    CORTEXON IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. 
+    LICENSOR DISCLAIMS ALL WARRANTIES, INCLUDING MERCHANTABILITY AND FITNESS FOR A 
+    PARTICULAR PURPOSE.
+
+8. Limitation of Liability
+
+    LICENSOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF CORTEXON, 
+    INCLUDING DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
+
+9. Governing Law
+
+    This Agreement shall be governed by the laws of the State of California, US, 
+    without regard to conflict of law principles.
+

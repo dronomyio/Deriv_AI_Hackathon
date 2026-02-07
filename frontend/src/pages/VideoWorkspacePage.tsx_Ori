@@ -1,0 +1,10 @@
+import VideoPlayer from '../components/VideoPlayer'
+import QueryPanel from '../components/QueryPanel'
+import ResultsPanel from '../components/ResultsPanel'
+export default function VideoWorkspacePage(){
+  return <div className="h-screen grid grid-cols-3">
+    <VideoPlayer/>
+    <QueryPanel/>
+    <ResultsPanel/>
+  </div>
+}
